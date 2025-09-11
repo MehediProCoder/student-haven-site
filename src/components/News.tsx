@@ -1,182 +1,174 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Calendar, 
-  Download, 
-  Eye, 
-  Bell,
-  GraduationCap,
-  Award,
-  FileText
-} from "lucide-react";
+import { Eye, Download, Play } from "lucide-react";
+import studentsGroup from "@/assets/students-group.jpg";
 
 const News = () => {
-  const announcements = [
+  const notices = [
     {
-      id: 1,
-      type: "Admission",
-      title: "Fall 2024 Admission Applications Now Open",
-      date: "Dec 15, 2024",
-      description: "Applications for undergraduate and graduate programs are now being accepted for Fall 2024 semester.",
-      category: "admission",
-      hasDownload: true,
-      priority: "high"
+      sl: 1,
+      topic: "Fall 2024 Admission - Undergraduate Programs - Merit List Published",
+      date: "Sep 11, 2025"
     },
     {
-      id: 2,
-      type: "Academic",
-      title: "Spring Semester Final Examination Schedule",
-      date: "Dec 12, 2024", 
-      description: "Detailed schedule for all final examinations has been published for Spring 2024 semester.",
-      category: "academic",
-      hasDownload: true,
-      priority: "medium"
+      sl: 2,
+      topic: "Spring (2024-2025) Final Examination Schedule for All Departments",
+      date: "Sep 9, 2025"
     },
     {
-      id: 3,
-      type: "Event",
-      title: "Annual Cultural Festival - 'Heritage 2024'",
-      date: "Dec 10, 2024",
-      description: "Join us for our annual cultural celebration featuring performances, art exhibitions, and cultural activities.",
-      category: "event",
-      hasDownload: false,
-      priority: "medium"
+      sl: 3,
+      topic: "Spring (2024-2025) Semester Registration Form Available",
+      date: "Sep 9, 2025"
     },
     {
-      id: 4,
-      type: "Achievement",
-      title: "Students Win National Science Competition",
-      date: "Dec 8, 2024",
-      description: "Our Science department students secured first place in the National Science Innovation Competition 2024.",
-      category: "achievement",
-      hasDownload: false,
-      priority: "low"
+      sl: 4,
+      topic: "Annual Cultural Festival Registration Now Open",
+      date: "Sep 9, 2025"
     },
     {
-      id: 5,
-      type: "Notice",
-      title: "Library Extended Hours During Exam Period",
-      date: "Dec 5, 2024",
-      description: "The central library will remain open 24/7 during the final examination period to support student studies.",
-      category: "notice",
-      hasDownload: false,
-      priority: "medium"
+      sl: 5,
+      topic: "Class Test and Mid-term Examination Schedule Published for All Students",
+      date: "Sep 7, 2025"
+    },
+    {
+      sl: 6,
+      topic: "Library Rules and Regulations Updated",
+      date: "Sep 6, 2025"
+    },
+    {
+      sl: 7,
+      topic: "Fall 2024 - Undergraduate (H.) Admission Merit List, Class & Verification Schedule Published",
+      date: "Sep 6, 2025"
+    },
+    {
+      sl: 8,
+      topic: "Fall 2024 - Undergraduate (H.) Admission Department-wise Merit List Published",
+      date: "Sep 4, 2025"
+    },
+    {
+      sl: 9,
+      topic: "Spring (2024-25) Final Exam Admit Card, Center, Hall & Seat Plan Published",
+      date: "Sep 3, 2025"
+    },
+    {
+      sl: 10,
+      topic: "All Notice: Semester Final Examination Schedule 2024-25 for All Departments",
+      date: "Sep 1, 2025"
     }
   ];
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case "admission": return GraduationCap;
-      case "academic": return FileText;
-      case "achievement": return Award;
-      default: return Bell;
-    }
-  };
-
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
-      case "high": return "bg-destructive text-destructive-foreground";
-      case "medium": return "bg-secondary text-secondary-foreground";
-      default: return "bg-muted text-muted-foreground";
-    }
-  };
-
   return (
-    <section id="notices" className="py-20 bg-gradient-to-b from-academic-light to-background">
+    <section id="notices" className="py-20 bg-academic-light">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
+        <div className="mb-12">
+          <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-4">
             Important Updates & News
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Stay informed with the latest updates, announcements, and news from Academic College.
+          <p className="text-muted-foreground">
+            Stay informed with the Latest updates & news
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Featured News */}
+          {/* Notice Table */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold text-primary mb-6">Latest Announcements</h3>
-            <div className="space-y-6">
-              {announcements.slice(0, 3).map((announcement) => {
-                const IconComponent = getCategoryIcon(announcement.category);
-                return (
-                  <Card key={announcement.id} className="shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] transition-all duration-300 border-0">
-                    <CardHeader>
-                      <div className="flex items-start justify-between">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-                            <IconComponent className="h-5 w-5 text-white" />
-                          </div>
-                          <div>
-                            <Badge className={getPriorityColor(announcement.priority)}>
-                              {announcement.type}
-                            </Badge>
-                            <CardTitle className="text-lg text-primary mt-2">
-                              {announcement.title}
-                            </CardTitle>
-                          </div>
-                        </div>
-                        <div className="flex items-center text-muted-foreground text-sm">
-                          <Calendar className="h-4 w-4 mr-1" />
-                          {announcement.date}
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground mb-4 leading-relaxed">
-                        {announcement.description}
-                      </p>
-                      <div className="flex items-center gap-3">
-                        <Button variant="ghost" size="sm">
-                          <Eye className="h-4 w-4 mr-2" />
-                          View Details
-                        </Button>
-                        {announcement.hasDownload && (
-                          <Button variant="outline" size="sm">
-                            <Download className="h-4 w-4 mr-2" />
-                            Download
+            <div className="bg-white rounded-lg shadow-sm border border-border overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-muted/50">
+                    <tr>
+                      <th className="px-4 py-3 text-left text-sm font-medium text-foreground border-r border-border">
+                        SL<br />NO.
+                      </th>
+                      <th className="px-4 py-3 text-left text-sm font-medium text-foreground border-r border-border">
+                        Topic
+                      </th>
+                      <th className="px-4 py-3 text-left text-sm font-medium text-foreground border-r border-border">
+                        Date
+                      </th>
+                      <th className="px-4 py-3 text-center text-sm font-medium text-foreground border-r border-border">
+                        View
+                      </th>
+                      <th className="px-4 py-3 text-center text-sm font-medium text-foreground">
+                        Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {notices.map((notice, index) => (
+                      <tr key={notice.sl} className={index % 2 === 0 ? "bg-background" : "bg-muted/20"}>
+                        <td className="px-4 py-4 text-center text-foreground border-r border-border border-b">
+                          {notice.sl}
+                        </td>
+                        <td className="px-4 py-4 text-foreground border-r border-border border-b">
+                          <span className="text-sm leading-relaxed">{notice.topic}</span>
+                        </td>
+                        <td className="px-4 py-4 text-foreground border-r border-border border-b">
+                          <span className="text-sm">{notice.date}</span>
+                        </td>
+                        <td className="px-4 py-4 text-center border-r border-border border-b">
+                          <Button 
+                            variant="ghost" 
+                            size="sm" 
+                            className="text-blue-600 hover:text-blue-800 hover:bg-blue-50 p-1"
+                          >
+                            <Eye className="h-4 w-4 mr-1" />
+                            <span className="text-xs">View</span>
                           </Button>
-                        )}
-                      </div>
-                    </CardContent>
-                  </Card>
-                );
-              })}
+                        </td>
+                        <td className="px-4 py-4 text-center border-b">
+                          <Button 
+                            variant="ghost" 
+                            size="sm" 
+                            className="text-green-600 hover:text-green-800 hover:bg-green-50 p-1"
+                          >
+                            <Download className="h-4 w-4 mr-1" />
+                            <span className="text-xs">Download</span>
+                          </Button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              
+              <div className="p-4 border-t border-border">
+                <Button variant="secondary" className="text-sm">
+                  <Eye className="h-4 w-4 mr-2" />
+                  View All Notice
+                </Button>
+              </div>
             </div>
           </div>
 
-          {/* Quick Updates */}
-          <div>
-            <h3 className="text-2xl font-bold text-primary mb-6">Quick Updates</h3>
-            <Card className="shadow-[var(--shadow-card)] border-0">
-              <CardContent className="p-6">
-                <div className="space-y-4">
-                  {announcements.slice(3).map((announcement) => (
-                    <div key={announcement.id} className="border-b border-border last:border-b-0 pb-4 last:pb-0">
-                      <div className="flex items-start justify-between mb-2">
-                        <Badge variant="outline" className="text-xs">
-                          {announcement.type}
-                        </Badge>
-                        <span className="text-xs text-muted-foreground">
-                          {announcement.date}
-                        </span>
-                      </div>
-                      <h4 className="font-medium text-sm text-primary mb-2 leading-tight">
-                        {announcement.title}
-                      </h4>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
-                        {announcement.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-                <Button variant="outline" className="w-full mt-6">
-                  View All Updates
+          {/* Right Side Content */}
+          <div className="lg:col-span-1">
+            <div className="bg-turquoise rounded-lg overflow-hidden text-white relative">
+              <div className="relative">
+                <img 
+                  src={studentsGroup} 
+                  alt="Top Achievers of Academic College"
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute inset-0 bg-black/20"></div>
+                <Button 
+                  variant="ghost" 
+                  size="icon" 
+                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white"
+                >
+                  <Play className="h-8 w-8" />
                 </Button>
-              </CardContent>
-            </Card>
+              </div>
+              
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-4">Top Achievers of Academic College</h3>
+                <p className="text-sm leading-relaxed text-white/90">
+                  Join us in honoring and celebrating the incredible accomplishments of the top-performing students of Academic College. These remarkable individuals have consistently demonstrated academic excellence and achievement. 
+                  Rigorously prepared to navigate not only their educational endeavors results but also the broader challenges of professional development and personal growth. Their performances and commitment that made these achievements possible. Our top achievers have consistently demonstrated resilience in the face of challenges. 
+                  Instead of effort in their studies and have to be true members and collaborators. Working thoughtfully with hands-on exploration and the right guidance. Let these top performers be celebrated. Their journeys reflect the very core values that Academic College stands for: commitment to lifelong learning, perseverance in the pursuit of goals, and the courage to dream, and achieve. Each of these bright minds now carries forward the legacy of our institution with pride and distinction.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
