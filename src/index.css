@@ -120,18 +120,8 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-  {/*body {
-    @apply bg-background text-foreground;
-    transform: scale(0.67);
-    transform-origin: top left;
-    width: 149.25%;
-    height: 149.25%;*
-  }*/}
+
   body {
-  @apply bg-background text-foreground;
-  transform: scale(0.67);
-  transform-origin: top left;
-  width: 149%; /* compensate for scaling shrink */
-  height: 149%;
-  overflow-x: hidden;
+    @apply bg-background text-foreground;
+  }
 }
