@@ -123,5 +123,9 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    transform: scale(0.67);
+    transform-origin: top left;
+    width: 149.25%; /* 100% / 0.67 to compensate for scaling */
+    height: 149.25%; /* 100% / 0.67 to compensate for scaling */
   }
 }
