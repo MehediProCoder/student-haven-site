@@ -34,9 +34,11 @@ const Footer = () => {
           {/* College Info */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">JGC</span>
-              </div>
+              <img 
+                src="/src/assets/Jahangirpur_Governmental_College_Logo-removebg-preview.png" 
+                alt="Jahangirpur Government College Logo"
+                className="w-12 h-12 object-contain"
+              />
               <div>
                 <h3 className="text-xl font-bold">Jahangirpur Government College</h3>
                 <p className="text-sm text-primary-foreground/80">Excellence in Education</p>
