@@ -26,11 +26,6 @@ const Hero = () => {
               </span>
             </h1>
             
-            <p className="text-xl lg:text-2xl mb-8 text-white/90 leading-relaxed">
-              Empowering minds since 1850. Join our legacy of academic excellence 
-              and shape your future with world-class education.
-            </p>
-
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8">
               <div className="text-center">
