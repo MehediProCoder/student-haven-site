@@ -21,9 +21,9 @@ const Hero = () => {
           <div className="text-white max-w-4xl">
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Jahangirpur Government College
-              {/*<span className="block text-3xl lg:text-4xl text-turquoise font-normal mt-2">
+              <span className="block text-3xl lg:text-4xl text-turquoise font-normal mt-2">
                 Know Thyself
-              </span>*/}
+              </span>
             </h1>
             
             {/* Stats */}
