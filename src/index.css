@@ -120,12 +120,19 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
-  body {
+  {/*body {
     @apply bg-background text-foreground;
     transform: scale(0.67);
-    {/*transform-origin: top left;
+    transform-origin: top left;
     width: 149.25%;
-    height: 149.25%;*/} 
-  }
+    height: 149.25%;*
+  }*/}
+  body {
+  @apply bg-background text-foreground;
+  transform: scale(0.67);
+  transform-origin: top left;
+  width: 149.25%;
+  height: 149.25%;
+  overflow-x: hidden; /* prevents horizontal scroll */
+}
 }
