@@ -131,8 +131,7 @@ All colors MUST be HSL.
   @apply bg-background text-foreground;
   transform: scale(0.67);
   transform-origin: top left;
-  width: 149.25%;
-  height: 149.25%;
-  overflow-x: hidden; /* prevents horizontal scroll */
-}
+  width: 149%; /* compensate for scaling shrink */
+  height: 149%;
+  overflow-x: hidden;
 }
