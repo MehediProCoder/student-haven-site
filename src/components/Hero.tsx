@@ -17,8 +17,8 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-white">
+        <div className="flex flex-col items-center justify-center text-center">
+          <div className="text-white max-w-4xl">
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Jahangirpur Government College
               <span className="block text-3xl lg:text-4xl text-turquoise font-normal mt-2">
