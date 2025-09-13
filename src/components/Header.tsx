@@ -9,7 +9,8 @@ const Header = () => {
     { name: "About", href: "#about" },
     { name: "Departments", href: "#departments" },
     { name: "Notice Board", href: "#notices" },
-    { name: "Contact", href: "#contact" },
+    { name: "Admission", href: "#admission" },
+    { name: "Gallery", href: "#gallery" },
   ];
 
   return (
@@ -19,10 +20,10 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">JGC</span>
+              <span className="text-white font-bold text-lg">AC</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-primary">Jahangirpur Government College</h1>
+              <h1 className="text-xl font-bold text-primary">Academic College</h1>
               <p className="text-xs text-muted-foreground">Excellence in Education</p>
             </div>
           </div>
@@ -42,8 +43,8 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="sm" asChild>
-              <a href="#contact">Contact Us</a>
+            <Button variant="hero" size="sm">
+              Contact Us
             </Button>
           </div>
 
@@ -73,8 +74,8 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <Button variant="hero" size="sm" className="mt-4 w-fit" asChild>
-                <a href="#contact">Contact Us</a>
+              <Button variant="hero" size="sm" className="mt-4 w-fit">
+                Contact Us
               </Button>
             </nav>
           </div>

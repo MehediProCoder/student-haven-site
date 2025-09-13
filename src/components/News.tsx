@@ -147,7 +147,7 @@ const News = () => {
               <div className="relative">
                 <img 
                   src={studentsGroup} 
-                  alt="Top Achievers of Jahangirpur Government College"
+                  alt="Top Achievers of Academic College"
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-black/20"></div>
@@ -161,11 +161,11 @@ const News = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-4">Top Achievers of Jahangirpur Government College</h3>
+                <h3 className="text-xl font-bold mb-4">Top Achievers of Academic College</h3>
                 <p className="text-sm leading-relaxed text-white/90">
-                  Join us in honoring and celebrating the incredible accomplishments of the top-performing students of Jahangirpur Government College. These remarkable individuals have consistently demonstrated academic excellence and achievement. 
+                  Join us in honoring and celebrating the incredible accomplishments of the top-performing students of Academic College. These remarkable individuals have consistently demonstrated academic excellence and achievement. 
                   Rigorously prepared to navigate not only their educational endeavors results but also the broader challenges of professional development and personal growth. Their performances and commitment that made these achievements possible. Our top achievers have consistently demonstrated resilience in the face of challenges. 
-                  Instead of effort in their studies and have to be true members and collaborators. Working thoughtfully with hands-on exploration and the right guidance. Let these top performers be celebrated. Their journeys reflect the very core values that Jahangirpur Government College stands for: commitment to lifelong learning, perseverance in the pursuit of goals, and the courage to dream, and achieve. Each of these bright minds now carries forward the legacy of our institution with pride and distinction.
+                  Instead of effort in their studies and have to be true members and collaborators. Working thoughtfully with hands-on exploration and the right guidance. Let these top performers be celebrated. Their journeys reflect the very core values that Academic College stands for: commitment to lifelong learning, perseverance in the pursuit of goals, and the courage to dream, and achieve. Each of these bright minds now carries forward the legacy of our institution with pride and distinction.
                 </p>
               </div>
             </div>
