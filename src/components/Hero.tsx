@@ -31,16 +31,6 @@ const Hero = () => {
               and shape your future with world-class education.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button variant="hero" size="lg" className="group">
-                Learn About Us
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
-                Apply Now
-              </Button>
-            </div>
-
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8">
               <div className="text-center">
