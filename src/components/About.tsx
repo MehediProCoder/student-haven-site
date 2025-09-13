@@ -33,7 +33,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
-            About Academic College
+            About Jahangirpur Government College
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             For over a century, we have been committed to academic excellence, 
@@ -45,7 +45,7 @@ const About = () => {
           <div>
             <h3 className="text-3xl font-bold text-primary mb-6">Our Legacy</h3>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Academic College stands as a beacon of educational excellence, where tradition meets innovation. 
+              Jahangirpur Government College stands as a beacon of educational excellence, where tradition meets innovation. 
               Our commitment to nurturing minds and building character has remained unwavering since our founding.
             </p>
             <div className="space-y-4">

@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Academic College Building"
+          alt="Jahangirpur Government College Building"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-academic-blue/90 via-academic-blue/80 to-turquoise/70"></div>
@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-white">
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Academic College
+              Jahangirpur Government College
               <span className="block text-3xl lg:text-4xl text-turquoise font-normal mt-2">
                 Know Thyself
               </span>
