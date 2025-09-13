@@ -35,7 +35,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-3 mb-6">
               <img 
-                src="/src/assets/Jahangirpur_Governmental_College_Logo-removebg-preview.png" 
+                src="/src/assets/JGC-logo.png" 
                 alt="Jahangirpur Government College Logo"
                 className="w-12 h-12 object-contain"
               />
